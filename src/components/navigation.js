@@ -13,7 +13,16 @@ const Navigation = ({ menuLinks }) => {
       {menuLinks.map(({ link, name }) => {
         return (
           <span key={link}>
-            <Link to={link}>{name}</Link>
+            <Link
+              style={{
+                fontFamily: "Exo",
+                fontWeight: "bold",
+                textDecoration: "none",
+              }}
+              to={link}
+            >
+              {name}
+            </Link>
           </span>
         )
       })}

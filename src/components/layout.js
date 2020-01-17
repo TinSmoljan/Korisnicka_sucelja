@@ -1,6 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Toolbar from "./toolbar"
+import StyledBackgroundSection from "../components/background"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -16,12 +17,12 @@ const Layout = ({ children }) => {
     }
   `)
 
-  console.log("Layout data:", data)
-
   return (
     <div>
-      <Toolbar menuLinks={data.site.siteMetadata.menuLinks} />
-      {children}
+      <div>
+        <Toolbar menuLinks={data.site.siteMetadata.menuLinks} />
+      </div>
+      <StyledBackgroundSection>{children}</StyledBackgroundSection>
     </div>
   )
 }

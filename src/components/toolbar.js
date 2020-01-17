@@ -1,4 +1,4 @@
-import React, { Component } from "react"
+import React from "react"
 import logo from "../images/logo.png"
 import Navigation from "./navigation"
 
@@ -7,13 +7,7 @@ const toolbarStyle = {
   alignItems: "center",
   backgroundColor: "#F9FAFB",
   justifyContent: "flex-start",
-}
-
-const toolbarStyle2 = {
-  display: "flex",
-  width: "300px",
-  backgroundColor: "#F9FAFB",
-  justifyContent: "space-around",
+  boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
 }
 
 const Toolbar = ({ menuLinks }) => {

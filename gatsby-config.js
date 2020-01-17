@@ -1,27 +1,39 @@
+const path = require(`path`)
+
 module.exports = {
   siteMetadata: {
     title: `Nav Links`,
-    menuLinks:[
+    menuLinks: [
       {
         name: `Exercises`,
-        link: `/src/pages/exercises`
+        link: `exercises`,
       },
       {
         name: `Stats`,
-        link: `/src/pages/stats`
+        link: `stats`,
       },
       {
         name: `Trends`,
-        link: `/src/pages/trends`
-      }
-      ]
+        link: `trends`,
+      },
+    ],
   },
   plugins: [
+    "gatsby-plugin-styled-components",
     {
       resolve: `gatsby-plugin-typography`,
       options: {
-        pathToConfigModule: `src/utils/typography`
+        pathToConfigModule: `src/utils/typography`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: path.join(__dirname, `src`, `images`),
+      },
+    },
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
   ],
 }
