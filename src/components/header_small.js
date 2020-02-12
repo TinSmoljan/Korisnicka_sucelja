@@ -5,7 +5,7 @@ export default props => (
     style={{
       fontFamily: "Exo",
       fontStyle: "normal",
-      fontSize: "60px",
+      fontSize: "30px",
       color: "#000000",
       mixBlendMode: "normal",
       textShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",

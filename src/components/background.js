@@ -10,7 +10,7 @@ const BackgroundSection = ({ className, children }) => (
       query {
         desktop: file(relativePath: { eq: "concrete_background.png" }) {
           childImageSharp {
-            fluid(quality: 90, maxWidth: 1920) {
+            fluid(quality: 90, maxWidth: 1920, maxHeight: 1080) {
               ...GatsbyImageSharpFluid_withWebp
             }
           }
@@ -35,8 +35,7 @@ const BackgroundSection = ({ className, children }) => (
 
 const StyledBackgroundSection = styled(BackgroundSection)`
   width: 100%;
-  height: 100vh;
-  z-index: -1;
+  height: 100%;
   background-position: bottom center;
   background-repeat: repeat-y;
   background-size: cover;

@@ -4,6 +4,8 @@ import Navigation from "./navigation"
 
 const toolbarStyle = {
   display: "flex",
+  position: "relative",
+  zIndex: "5",
   alignItems: "center",
   backgroundColor: "#F9FAFB",
   justifyContent: "flex-start",

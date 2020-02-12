@@ -18,12 +18,21 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <div>
+    <body
+      style={{
+        maxHeight: "1080",
+        maxWidth: "1920",
+        height: "100%",
+        width: "100%",
+      }}
+    >
       <div>
         <Toolbar menuLinks={data.site.siteMetadata.menuLinks} />
       </div>
-      <StyledBackgroundSection>{children}</StyledBackgroundSection>
-    </div>
+      <div>
+        <StyledBackgroundSection>{children}</StyledBackgroundSection>
+      </div>
+    </body>
   )
 }
 
